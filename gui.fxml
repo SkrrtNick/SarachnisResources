@@ -183,7 +183,7 @@
                <content>
                   <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="290.0" prefWidth="512.0">
                      <children>
-                        <Slider fx:id="slideMouseSpeed" layoutX="14.0" layoutY="56.0" prefHeight="14.0" prefWidth="255.0" />
+                        <Slider fx:id="slideMouseSpeed" layoutX="14.0" layoutY="56.0" max="300.0" min="100.0" prefHeight="14.0" prefWidth="255.0" value="100.0" />
                         <CheckBox fx:id="checkCustomMouse" layoutX="14.0" layoutY="22.0" mnemonicParsing="false" text="Custom Mouse Speed">
                            <tooltip>
                               <Tooltip text="Requires 70 Prayer and 70 Defence" />
