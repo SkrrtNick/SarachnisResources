@@ -191,6 +191,11 @@
                            </tooltip>
                         </CheckBox>
                         <Text fx:id="txtMouseSpeed" layoutX="167.0" layoutY="35.0" strokeType="OUTSIDE" strokeWidth="0.0" text="0" />
+                        <CheckBox fx:id="checkRestocking" layoutX="14.0" layoutY="80.0" mnemonicParsing="false" text="Restocking">
+                           <tooltip>
+                              <Tooltip text="Requires 70 Prayer and 70 Defence" />
+                           </tooltip>
+                        </CheckBox>
                      </children>
                   </AnchorPane>
                </content>
