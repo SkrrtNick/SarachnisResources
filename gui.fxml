@@ -8,6 +8,7 @@
 <?import javafx.scene.control.Menu?>
 <?import javafx.scene.control.MenuBar?>
 <?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.RadioButton?>
 <?import javafx.scene.control.Slider?>
 <?import javafx.scene.control.Spinner?>
 <?import javafx.scene.control.Tab?>
@@ -99,6 +100,35 @@
                   </AnchorPane>
             </content>
           </Tab>
+            <Tab text="Restocking">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="290.0" prefWidth="512.0">
+                     <children>
+                        <CheckBox fx:id="checkRestocking" layoutX="14.0" layoutY="22.0" mnemonicParsing="false" text="Restocking">
+                           <tooltip>
+                              <Tooltip text="Requires 70 Prayer and 70 Defence" />
+                           </tooltip>
+                        </CheckBox>
+                        <CheckBox fx:id="checkRoW" layoutX="14.0" layoutY="81.0" mnemonicParsing="false" text="Buy RoW">
+                           <tooltip>
+                              <Tooltip text="Will repair ALL broken barrows gear in bank" />
+                           </tooltip>
+                        </CheckBox>
+                        <CheckBox fx:id="checkLoot" layoutX="13.0" layoutY="52.0" mnemonicParsing="false" text="Sell loot before restocking">
+                           <tooltip>
+                              <Tooltip text="Will repair ALL broken barrows gear in bank" />
+                           </tooltip>
+                        </CheckBox>
+                        <Spinner fx:id="spinTrips" editable="true" layoutX="128.0" layoutY="108.0" prefHeight="25.0" prefWidth="56.0" />
+                        <Text layoutX="14.0" layoutY="125.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Restock for X trips" />
+                        <ComboBox fx:id="cmbBuying" layoutX="344.0" layoutY="18.0" prefHeight="25.0" prefWidth="134.0" />
+                        <ComboBox fx:id="cmbSelling" layoutX="344.0" layoutY="48.0" prefHeight="25.0" prefWidth="134.0" />
+                        <Text layoutX="255.0" layoutY="35.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Buying Mode" />
+                        <Text layoutX="255.0" layoutY="65.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Selling Mode" />
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
             <Tab text="Advanced">
                <content>
                   <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="290.0" prefWidth="512.0">
@@ -108,22 +138,12 @@
                               <Tooltip text="Will repair ALL broken barrows gear in bank" />
                            </tooltip>
                         </CheckBox>
-                        <CheckBox fx:id="checkLoot" layoutX="14.0" layoutY="55.0" mnemonicParsing="false" text="Sell loot before restocking">
+                        <CheckBox fx:id="checkSingle" layoutX="14.0" layoutY="55.0" mnemonicParsing="false" text="End after 1st kill">
                            <tooltip>
                               <Tooltip text="Will repair ALL broken barrows gear in bank" />
                            </tooltip>
                         </CheckBox>
-                        <CheckBox fx:id="checkSingle" layoutX="14.0" layoutY="87.0" mnemonicParsing="false" text="End after 1st kill">
-                           <tooltip>
-                              <Tooltip text="Will repair ALL broken barrows gear in bank" />
-                           </tooltip>
-                        </CheckBox>
-                        <CheckBox fx:id="checkRoW" layoutX="14.0" layoutY="117.0" mnemonicParsing="false" text="Buy RoW">
-                           <tooltip>
-                              <Tooltip text="Will repair ALL broken barrows gear in bank" />
-                           </tooltip>
-                        </CheckBox>
-                        <CheckBox fx:id="checkLootEat" layoutX="15.0" layoutY="148.0" mnemonicParsing="false" text="Eat food for loot">
+                        <CheckBox fx:id="checkLootEat" layoutX="14.0" layoutY="86.0" mnemonicParsing="false" text="Eat food for loot">
                            <tooltip>
                               <Tooltip text="Requires 70 Prayer and 70 Defence" />
                            </tooltip>
@@ -166,16 +186,13 @@
                            </tooltip>
                         </CheckBox>
                         <Spinner fx:id="spinPrayer" layoutX="363.0" layoutY="81.0" prefHeight="25.0" prefWidth="57.0" />
-                        <CheckBox fx:id="checkQuickPrayer" layoutX="15.0" layoutY="175.0" mnemonicParsing="false" text="Use Quick Prayers">
+                        <CheckBox fx:id="checkQuickPrayer" layoutX="14.0" layoutY="113.0" mnemonicParsing="false" text="Use Quick Prayers">
                            <tooltip>
                               <Tooltip text="See thread for details" />
                            </tooltip>
                         </CheckBox>
-                        <CheckBox fx:id="checkAlch" layoutX="15.0" layoutY="204.0" mnemonicParsing="false" text="Use High Alch">
-                           <tooltip>
-                              <Tooltip text="Requires 55 magic" />
-                           </tooltip>
-                        </CheckBox>
+                        <RadioButton fx:id="radioMelee" layoutX="14.0" layoutY="143.0" mnemonicParsing="false" text="Quick Prayer Melee" />
+                        <RadioButton fx:id="radioRanged" layoutX="14.0" layoutY="170.0" mnemonicParsing="false" text="Quick Prayer Ranged" />
                      </children>
                   </AnchorPane>
                </content>
@@ -184,18 +201,13 @@
                <content>
                   <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="290.0" prefWidth="512.0">
                      <children>
-                        <Slider fx:id="slideMouseSpeed" layoutX="14.0" layoutY="56.0" max="300.0" min="100.0" prefHeight="14.0" prefWidth="255.0" value="100.0" />
-                        <CheckBox fx:id="checkCustomMouse" layoutX="14.0" layoutY="22.0" mnemonicParsing="false" text="Custom Mouse Speed">
+                        <Slider fx:id="slideMouseSpeed1" layoutX="14.0" layoutY="56.0" max="300.0" min="100.0" prefHeight="14.0" prefWidth="255.0" value="100.0" />
+                        <CheckBox fx:id="checkCustomMouse1" layoutX="14.0" layoutY="22.0" mnemonicParsing="false" text="Custom Mouse Speed">
                            <tooltip>
                               <Tooltip text="Requires 70 Prayer and 70 Defence" />
                            </tooltip>
                         </CheckBox>
-                        <Text fx:id="txtMouseSpeed" layoutX="167.0" layoutY="35.0" strokeType="OUTSIDE" strokeWidth="0.0" text="0" />
-                        <CheckBox fx:id="checkRestocking" layoutX="14.0" layoutY="80.0" mnemonicParsing="false" text="Restocking">
-                           <tooltip>
-                              <Tooltip text="Requires 70 Prayer and 70 Defence" />
-                           </tooltip>
-                        </CheckBox>
+                        <Text fx:id="txtMouseSpeed1" layoutX="167.0" layoutY="35.0" strokeType="OUTSIDE" strokeWidth="0.0" text="0" />
                      </children>
                   </AnchorPane>
                </content>
