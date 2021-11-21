@@ -125,6 +125,16 @@
                         <ComboBox fx:id="cmbSelling" layoutX="344.0" layoutY="48.0" prefHeight="25.0" prefWidth="134.0" />
                         <Text layoutX="255.0" layoutY="35.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Buying Mode" />
                         <Text layoutX="255.0" layoutY="65.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Selling Mode" />
+                        <CheckBox fx:id="checkDecantPots" layoutX="14.0" layoutY="140.0" mnemonicParsing="false" text="Decant Potions">
+                           <tooltip>
+                              <Tooltip text="Requires 70 Prayer and 70 Defence" />
+                           </tooltip>
+                        </CheckBox>
+                        <CheckBox fx:id="checkDecantJewellery" layoutX="14.0" layoutY="169.0" mnemonicParsing="false" text="Decant Jewellery">
+                           <tooltip>
+                              <Tooltip text="Requires 70 Prayer and 70 Defence" />
+                           </tooltip>
+                        </CheckBox>
                      </children>
                   </AnchorPane>
                </content>
@@ -202,7 +212,7 @@
                   <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="290.0" prefWidth="512.0">
                      <children>
                         <Slider fx:id="slideMouseSpeed1" layoutX="14.0" layoutY="56.0" max="300.0" min="100.0" prefHeight="14.0" prefWidth="255.0" value="100.0" />
-                        <CheckBox fx:id="checkCustomMouse1" layoutX="14.0" layoutY="22.0" mnemonicParsing="false" text="Custom Mouse Speed">
+                        <CheckBox fx:id="checkCustomMouse" layoutX="14.0" layoutY="22.0" mnemonicParsing="false" text="Custom Mouse Speed">
                            <tooltip>
                               <Tooltip text="Requires 70 Prayer and 70 Defence" />
                            </tooltip>
