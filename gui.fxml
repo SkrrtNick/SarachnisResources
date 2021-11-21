@@ -218,6 +218,16 @@
                            </tooltip>
                         </CheckBox>
                         <Text fx:id="txtMouseSpeed" layoutX="167.0" layoutY="35.0" strokeType="OUTSIDE" strokeWidth="0.0" text="0" />
+                        <CheckBox fx:id="checkAutoRetaliate" layoutX="14.0" layoutY="82.0" mnemonicParsing="false" text="Use auto-retaliate">
+                           <tooltip>
+                              <Tooltip text="Requires 70 Prayer and 70 Defence" />
+                           </tooltip>
+                        </CheckBox>
+                        <CheckBox fx:id="checkCrush" layoutX="14.0" layoutY="113.0" mnemonicParsing="false" text="Set crush attack style">
+                           <tooltip>
+                              <Tooltip text="Requires 70 Prayer and 70 Defence" />
+                           </tooltip>
+                        </CheckBox>
                      </children>
                   </AnchorPane>
                </content>
