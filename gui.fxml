@@ -120,7 +120,6 @@
                            </tooltip>
                         </CheckBox>
                         <Spinner fx:id="spinTrips" editable="true" layoutX="128.0" layoutY="108.0" prefHeight="25.0" prefWidth="56.0" />
-                        <Text layoutX="14.0" layoutY="125.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Restock for X trips" />
                         <ComboBox fx:id="cmbBuying" layoutX="344.0" layoutY="18.0" prefHeight="25.0" prefWidth="134.0" />
                         <ComboBox fx:id="cmbSelling" layoutX="344.0" layoutY="48.0" prefHeight="25.0" prefWidth="134.0" />
                         <Text layoutX="255.0" layoutY="35.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Buying Mode" />
@@ -133,6 +132,11 @@
                         <CheckBox fx:id="checkDecantJewellery" layoutX="14.0" layoutY="169.0" mnemonicParsing="false" text="Decant Jewellery">
                            <tooltip>
                               <Tooltip text="Requires 70 Prayer and 70 Defence" />
+                           </tooltip>
+                        </CheckBox>
+                        <CheckBox fx:id="checkTrips" layoutX="14.0" layoutY="112.0" mnemonicParsing="false" text="Restock for trips">
+                           <tooltip>
+                              <Tooltip text="Will repair ALL broken barrows gear in bank" />
                            </tooltip>
                         </CheckBox>
                      </children>
