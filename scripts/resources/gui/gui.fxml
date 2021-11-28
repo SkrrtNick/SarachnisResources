@@ -232,6 +232,11 @@
                               <Tooltip text="Not pure friendly!" />
                            </tooltip>
                         </CheckBox>
+                        <CheckBox fx:id="checkFn" layoutX="14.0" layoutY="143.0" mnemonicParsing="false" text="Always use fn keys">
+                           <tooltip>
+                              <Tooltip text="Not pure friendly!" />
+                           </tooltip>
+                        </CheckBox>
                      </children>
                   </AnchorPane>
                </content>
