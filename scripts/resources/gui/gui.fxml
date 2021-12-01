@@ -30,17 +30,7 @@
                      <children>
                         <CheckBox fx:id="checkSpiders" layoutX="18.0" layoutY="31.0" mnemonicParsing="false" text="Prioritise Magic Spiders">
                            <tooltip>
-                              <Tooltip text="Better for lower hp builds" />
-                           </tooltip>
-                        </CheckBox>
-                        <CheckBox fx:id="checkPiety" layoutX="18.0" layoutY="60.0" mnemonicParsing="false" text="Use Piety">
-                           <tooltip>
-                              <Tooltip text="Requires 70 Prayer and 70 Defence" />
-                           </tooltip>
-                        </CheckBox>
-                        <CheckBox fx:id="checkFlick" layoutX="18.0" layoutY="88.0" mnemonicParsing="false" text="Prayer flick">
-                           <tooltip>
-                              <Tooltip text="Reduces need for prayer pots, higher amount of interaction so use at own risk" />
+                              <Tooltip text="Better for low hp/dps builds" />
                            </tooltip>
                         </CheckBox>
                         <CheckBox fx:id="checkSquare" layoutX="18.0" layoutY="118.0" mnemonicParsing="false" text="Stay within safe square">
@@ -63,6 +53,16 @@
                         <ComboBox fx:id="cmbTravel" layoutX="307.0" layoutY="104.0" prefWidth="150.0" />
                         <ComboBox fx:id="cmbSpec" layoutX="306.0" layoutY="186.0" prefWidth="150.0" />
                         <Text layoutX="266.0" layoutY="203.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Spec" />
+                        <CheckBox fx:id="checkAutoRetaliate" layoutX="18.0" layoutY="59.0" mnemonicParsing="false" text="Use auto-retaliate">
+                           <tooltip>
+                              <Tooltip text="Recommended" />
+                           </tooltip>
+                        </CheckBox>
+                        <CheckBox fx:id="checkFn" layoutX="18.0" layoutY="88.0" mnemonicParsing="false" text="Always use fn keys">
+                           <tooltip>
+                              <Tooltip text="Increases efficiency" />
+                           </tooltip>
+                        </CheckBox>
                      </children>
                   </AnchorPane>
             </content>
@@ -78,28 +78,109 @@
                         <Button fx:id="btnCape" layoutX="150.0" layoutY="64.0" mnemonicParsing="false" onAction="#btnCapePressed" text="..." />
                         <TextField fx:id="txtShield" editable="false" layoutX="191.0" layoutY="64.0" text="Shield" />
                         <Button fx:id="btnShield" layoutX="316.0" layoutY="64.0" mnemonicParsing="false" onAction="#btnShieldPressed" text="..." />
-                        <TextField fx:id="txtWeapon" editable="false" layoutX="191.0" layoutY="30.0" text="Weapon" />
-                        <Button fx:id="btnWeapon" layoutX="316.0" layoutY="30.0" mnemonicParsing="false" onAction="#btnWeaponPressed" text="..." />
-                        <TextField fx:id="txtAmmo" editable="false" layoutX="25.0" layoutY="134.0" text="Ammo" />
-                        <Button fx:id="btnAmmo" layoutX="150.0" layoutY="134.0" mnemonicParsing="false" onAction="#btnAmmoPressed" text="..." />
+                        <TextField fx:id="txtWeapon" editable="false" layoutX="362.0" layoutY="98.0" text="Weapon" />
+                        <Button fx:id="btnWeapon" layoutX="487.0" layoutY="98.0" mnemonicParsing="false" onAction="#btnWeaponPressed" text="..." />
+                        <TextField fx:id="txtAmmo" editable="false" layoutX="362.0" layoutY="31.0" text="Ammo" />
+                        <Button fx:id="btnAmmo" layoutX="487.0" layoutY="31.0" mnemonicParsing="false" onAction="#btnAmmoPressed" text="..." />
                         <TextField fx:id="txtNeck" editable="false" layoutX="25.0" layoutY="98.0" text="Neck" />
                         <Button fx:id="btnNeck" layoutX="150.0" layoutY="98.0" mnemonicParsing="false" onAction="#btnNeckPressed" text="..." />
                         <TextField fx:id="txtBody" editable="false" layoutX="191.0" layoutY="99.0" text="Body" />
                         <Button fx:id="btnBody" layoutX="316.0" layoutY="99.0" mnemonicParsing="false" onAction="#btnBodyPressed" text="..." />
                         <TextField fx:id="txtLegs" editable="false" layoutX="191.0" layoutY="134.0" text="Legs" />
                         <Button fx:id="btnLegs" layoutX="316.0" layoutY="134.0" mnemonicParsing="false" onAction="#btnLegsPressed" text="..." />
-                        <TextField fx:id="txtHands" editable="false" layoutX="362.0" layoutY="65.0" text="Hands" />
-                        <Button fx:id="btnHands" layoutX="487.0" layoutY="65.0" mnemonicParsing="false" onAction="#btnHandsPressed" text="..." />
-                        <TextField fx:id="txtFeet" editable="false" layoutX="362.0" layoutY="99.0" text="Feet" />
-                        <Button fx:id="btnFeet" layoutX="487.0" layoutY="99.0" mnemonicParsing="false" onAction="#btnFeetPressed" text="..." />
-                        <TextField fx:id="txtRing" editable="false" layoutX="362.0" layoutY="133.0" text="Ring" />
-                        <Button fx:id="btnRing" layoutX="487.0" layoutY="134.0" mnemonicParsing="false" onAction="#btnRingPressed" text="..." />
-                        <CheckBox fx:id="checkTwoHands" layoutX="362.0" layoutY="35.0" mnemonicParsing="false" text="Two Handed" />
+                        <TextField fx:id="txtHands" editable="false" layoutX="191.0" layoutY="31.0" text="Hands" />
+                        <Button fx:id="btnHands" layoutX="316.0" layoutY="31.0" mnemonicParsing="false" onAction="#btnHandsPressed" text="..." />
+                        <TextField fx:id="txtFeet" editable="false" layoutX="362.0" layoutY="64.0" text="Feet" />
+                        <Button fx:id="btnFeet" layoutX="487.0" layoutY="64.0" mnemonicParsing="false" onAction="#btnFeetPressed" text="..." />
+                        <TextField fx:id="txtRing" editable="false" layoutX="25.0" layoutY="134.0" text="Ring" />
+                        <Button fx:id="btnRing" layoutX="150.0" layoutY="135.0" mnemonicParsing="false" onAction="#btnRingPressed" text="..." />
+                        <CheckBox fx:id="checkTwoHands" layoutX="362.0" layoutY="138.0" mnemonicParsing="false" text="Two Handed" />
                         <TitledPane animated="false" layoutX="-65.0" layoutY="-89.0" text="untitled" />
                      </children>
                   </AnchorPane>
             </content>
           </Tab>
+            <Tab text="Advanced">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="290.0" prefWidth="512.0">
+                     <children>
+                        <CheckBox fx:id="checkBarrows" layoutX="14.0" layoutY="25.0" mnemonicParsing="false" text="Repair barrows gear">
+                           <tooltip>
+                              <Tooltip text="Will repair barrows gear once it detects it has broken" />
+                           </tooltip>
+                        </CheckBox>
+                        <CheckBox fx:id="checkSingle" layoutX="14.0" layoutY="55.0" mnemonicParsing="false" text="End after 1st kill">
+                           <tooltip>
+                              <Tooltip text="Will terminate the script after the first kill" />
+                           </tooltip>
+                        </CheckBox>
+                        <CheckBox fx:id="checkLootEat" layoutX="14.0" layoutY="86.0" mnemonicParsing="false" text="Eat food for loot">
+                           <tooltip>
+                              <Tooltip text="Will eat food for loot if the inventory is full" />
+                           </tooltip>
+                        </CheckBox>
+                        <CheckBox fx:id="checkForceFoodQuantity" layoutX="210.0" layoutY="25.0" mnemonicParsing="false" text="Force food quantity">
+                           <tooltip>
+                              <Tooltip text="Otherwise will be determined by the script" />
+                           </tooltip>
+                        </CheckBox>
+                        <Spinner fx:id="spinFood" layoutX="363.0" layoutY="21.0" prefHeight="25.0" prefWidth="57.0" />
+                        <CheckBox fx:id="checkIntervalHop" layoutX="210.0" layoutY="114.0" mnemonicParsing="false" text="Worldhop every">
+                           <tooltip>
+                              <Tooltip text="Will add a timer of when to world hop" />
+                           </tooltip>
+                        </CheckBox>
+                        <Spinner fx:id="spinWorldHopMin" layoutX="325.0" layoutY="110.0" prefHeight="25.0" prefWidth="57.0" />
+                        <Text layoutX="391.0" layoutY="127.0" strokeType="OUTSIDE" strokeWidth="0.0" text="to" />
+                        <Spinner fx:id="spinWorldHopMax" layoutX="410.0" layoutY="110.0" prefHeight="25.0" prefWidth="57.0" />
+                        <Text layoutX="477.0" layoutY="127.0" strokeType="OUTSIDE" strokeWidth="0.0" text="mins" />
+                        <CheckBox fx:id="checkHopOnStart" layoutX="210.0" layoutY="143.0" mnemonicParsing="false" text="Hop if Sarachnis is already engaged">
+                           <tooltip>
+                              <Tooltip text="Otherwise will potentially crash players already in the fight" />
+                           </tooltip>
+                        </CheckBox>
+                        <CheckBox fx:id="checkForceBank" layoutX="211.0" layoutY="173.0" mnemonicParsing="false" text="Force bank after x kills">
+                           <tooltip>
+                              <Tooltip text="Otherwise will be determined by the script" />
+                           </tooltip>
+                        </CheckBox>
+                        <Spinner fx:id="spinBank" layoutX="363.0" layoutY="169.0" prefHeight="25.0" prefWidth="57.0" />
+                        <CheckBox fx:id="checkForceCombatQuantity" layoutX="210.0" layoutY="55.0" mnemonicParsing="false" text="Force combat quantity">
+                           <tooltip>
+                              <Tooltip text="Otherwise will be determined by the script" />
+                           </tooltip>
+                        </CheckBox>
+                        <Spinner fx:id="spinCombat" layoutX="363.0" layoutY="51.0" prefHeight="25.0" prefWidth="57.0" />
+                        <CheckBox fx:id="checkForcePrayerQuantity" layoutX="210.0" layoutY="85.0" mnemonicParsing="false" text="Force prayer quantity">
+                           <tooltip>
+                              <Tooltip text="Otherwise will be determined by the script" />
+                           </tooltip>
+                        </CheckBox>
+                        <Spinner fx:id="spinPrayer" layoutX="363.0" layoutY="81.0" prefHeight="25.0" prefWidth="57.0" />
+                        <CheckBox fx:id="checkCrush" layoutX="14.0" layoutY="116.0" mnemonicParsing="false" text="Set crush attack style">
+                           <tooltip>
+                              <Tooltip text="Not pure friendly!" />
+                           </tooltip>
+                        </CheckBox>
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+            <Tab text="Continued...">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="290.0" prefWidth="512.0">
+                     <children>
+                        <Slider fx:id="slideMouseSpeed" layoutX="14.0" layoutY="56.0" max="300.0" min="100.0" prefHeight="14.0" prefWidth="255.0" value="100.0" />
+                        <CheckBox fx:id="checkCustomMouse" layoutX="14.0" layoutY="22.0" mnemonicParsing="false" text="Custom Mouse Speed">
+                           <tooltip>
+                              <Tooltip text="Will speed up mouse movements, use at own risk" />
+                           </tooltip>
+                        </CheckBox>
+                        <Text fx:id="txtMouseSpeed" layoutX="167.0" layoutY="35.0" strokeType="OUTSIDE" strokeWidth="0.0" text="0" />
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
             <Tab text="Restocking">
                <content>
                   <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="290.0" prefWidth="512.0">
@@ -143,103 +224,35 @@
                   </AnchorPane>
                </content>
             </Tab>
-            <Tab text="Advanced">
-               <content>
-                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="290.0" prefWidth="512.0">
+            <Tab text="Prayer">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
                      <children>
-                        <CheckBox fx:id="checkBarrows" layoutX="14.0" layoutY="25.0" mnemonicParsing="false" text="Repair barrows gear">
-                           <tooltip>
-                              <Tooltip text="Will repair ALL broken barrows gear in bank" />
-                           </tooltip>
-                        </CheckBox>
-                        <CheckBox fx:id="checkSingle" layoutX="14.0" layoutY="55.0" mnemonicParsing="false" text="End after 1st kill">
-                           <tooltip>
-                              <Tooltip text="Will repair ALL broken barrows gear in bank" />
-                           </tooltip>
-                        </CheckBox>
-                        <CheckBox fx:id="checkLootEat" layoutX="14.0" layoutY="86.0" mnemonicParsing="false" text="Eat food for loot">
-                           <tooltip>
-                              <Tooltip text="Requires 70 Prayer and 70 Defence" />
-                           </tooltip>
-                        </CheckBox>
-                        <CheckBox fx:id="checkForceFoodQuantity" layoutX="210.0" layoutY="25.0" mnemonicParsing="false" text="Force food quantity">
-                           <tooltip>
-                              <Tooltip text="Otherwise will be determined by the script" />
-                           </tooltip>
-                        </CheckBox>
-                        <Spinner fx:id="spinFood" layoutX="363.0" layoutY="21.0" prefHeight="25.0" prefWidth="57.0" />
-                        <CheckBox fx:id="checkIntervalHop" layoutX="210.0" layoutY="114.0" mnemonicParsing="false" text="Worldhop every">
-                           <tooltip>
-                              <Tooltip text="Otherwise will be determined by the script" />
-                           </tooltip>
-                        </CheckBox>
-                        <Spinner fx:id="spinWorldHopMin" layoutX="325.0" layoutY="110.0" prefHeight="25.0" prefWidth="57.0" />
-                        <Text layoutX="391.0" layoutY="127.0" strokeType="OUTSIDE" strokeWidth="0.0" text="to" />
-                        <Spinner fx:id="spinWorldHopMax" layoutX="410.0" layoutY="110.0" prefHeight="25.0" prefWidth="57.0" />
-                        <Text layoutX="477.0" layoutY="127.0" strokeType="OUTSIDE" strokeWidth="0.0" text="mins" />
-                        <CheckBox fx:id="checkHopOnStart" layoutX="210.0" layoutY="143.0" mnemonicParsing="false" text="Hop if Sarachnis is already engaged">
-                           <tooltip>
-                              <Tooltip text="Otherwise will potentially crash players already in the fight" />
-                           </tooltip>
-                        </CheckBox>
-                        <CheckBox fx:id="checkForceBank" layoutX="211.0" layoutY="173.0" mnemonicParsing="false" text="Force bank after x kills">
-                           <tooltip>
-                              <Tooltip text="Otherwise will be determined by the script" />
-                           </tooltip>
-                        </CheckBox>
-                        <Spinner fx:id="spinBank" layoutX="363.0" layoutY="169.0" prefHeight="25.0" prefWidth="57.0" />
-                        <CheckBox fx:id="checkForceCombatQuantity" layoutX="210.0" layoutY="55.0" mnemonicParsing="false" text="Force combat quantity">
-                           <tooltip>
-                              <Tooltip text="Otherwise will be determined by the script" />
-                           </tooltip>
-                        </CheckBox>
-                        <Spinner fx:id="spinCombat" layoutX="363.0" layoutY="51.0" prefHeight="25.0" prefWidth="57.0" />
-                        <CheckBox fx:id="checkForcePrayerQuantity" layoutX="210.0" layoutY="85.0" mnemonicParsing="false" text="Force prayer quantity">
-                           <tooltip>
-                              <Tooltip text="Otherwise will be determined by the script" />
-                           </tooltip>
-                        </CheckBox>
-                        <Spinner fx:id="spinPrayer" layoutX="363.0" layoutY="81.0" prefHeight="25.0" prefWidth="57.0" />
-                        <CheckBox fx:id="checkQuickPrayer" layoutX="14.0" layoutY="113.0" mnemonicParsing="false" text="Use Quick Prayers">
+                        <CheckBox fx:id="checkQuickPrayer" layoutX="23.0" layoutY="59.0" mnemonicParsing="false" text="Use Quick Prayers">
                            <tooltip>
                               <Tooltip text="See thread for details" />
                            </tooltip>
                         </CheckBox>
-                        <RadioButton fx:id="radioMelee" layoutX="14.0" layoutY="143.0" mnemonicParsing="false" text="Quick Prayer Melee" />
-                        <RadioButton fx:id="radioRanged" layoutX="14.0" layoutY="170.0" mnemonicParsing="false" text="Quick Prayer Ranged" />
-                     </children>
-                  </AnchorPane>
-               </content>
-            </Tab>
-            <Tab text="Continued...">
-               <content>
-                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="290.0" prefWidth="512.0">
-                     <children>
-                        <Slider fx:id="slideMouseSpeed" layoutX="14.0" layoutY="56.0" max="300.0" min="100.0" prefHeight="14.0" prefWidth="255.0" value="100.0" />
-                        <CheckBox fx:id="checkCustomMouse" layoutX="14.0" layoutY="22.0" mnemonicParsing="false" text="Custom Mouse Speed">
+                        <RadioButton fx:id="radioMelee" layoutX="23.0" layoutY="89.0" mnemonicParsing="false" text="Quick Prayer Melee" />
+                        <RadioButton fx:id="radioRanged" layoutX="23.0" layoutY="118.0" mnemonicParsing="false" text="Quick Prayer Ranged" />
+                        <CheckBox fx:id="checkPiety" layoutX="24.0" layoutY="147.0" mnemonicParsing="false" text="Use Piety">
                            <tooltip>
                               <Tooltip text="Requires 70 Prayer and 70 Defence" />
                            </tooltip>
                         </CheckBox>
-                        <Text fx:id="txtMouseSpeed" layoutX="167.0" layoutY="35.0" strokeType="OUTSIDE" strokeWidth="0.0" text="0" />
-                        <CheckBox fx:id="checkAutoRetaliate" layoutX="14.0" layoutY="82.0" mnemonicParsing="false" text="Use auto-retaliate">
+                        <CheckBox fx:id="checkFlick" layoutX="22.0" layoutY="27.0" mnemonicParsing="false" text="Prayer flick">
                            <tooltip>
-                              <Tooltip text="Recommended" />
+                              <Tooltip text="Reduces need for prayer pots, higher amount of interaction so use at own risk" />
                            </tooltip>
                         </CheckBox>
-                        <CheckBox fx:id="checkCrush" layoutX="14.0" layoutY="113.0" mnemonicParsing="false" text="Set crush attack style">
+                        <CheckBox fx:id="checkCombatBoost" layoutX="24.0" layoutY="177.0" mnemonicParsing="false" text="Use combat boosting prayers">
                            <tooltip>
-                              <Tooltip text="Not pure friendly!" />
-                           </tooltip>
-                        </CheckBox>
-                        <CheckBox fx:id="checkFn" layoutX="14.0" layoutY="143.0" mnemonicParsing="false" text="Always use fn keys">
-                           <tooltip>
-                              <Tooltip text="Not pure friendly!" />
+                              <Tooltip text="Requires 70 Prayer and 70 Defence" />
                            </tooltip>
                         </CheckBox>
                      </children>
                   </AnchorPane>
-               </content>
+              </content>
             </Tab>
         </tabs>
       </TabPane>
@@ -269,7 +282,7 @@
             <Button fx:id="btnStart" mnemonicParsing="false" onAction="#btnStartPressed" prefHeight="25.0" prefWidth="65.0" text="Start" />
          </buttons>
          <padding>
-            <Insets right="10.0" />
+            <Insets bottom="10.0" right="10.0" />
          </padding>
       </ButtonBar>
    </bottom>
