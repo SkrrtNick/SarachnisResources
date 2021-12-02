@@ -177,6 +177,11 @@
                            </tooltip>
                         </CheckBox>
                         <Text fx:id="txtMouseSpeed" layoutX="167.0" layoutY="35.0" strokeType="OUTSIDE" strokeWidth="0.0" text="0" />
+                        <CheckBox fx:id="checkDebug" layoutX="14.0" layoutY="86.0" mnemonicParsing="false" text="Debug Mode">
+                           <tooltip>
+                              <Tooltip text="Will speed up mouse movements, use at own risk" />
+                           </tooltip>
+                        </CheckBox>
                      </children>
                   </AnchorPane>
                </content>
