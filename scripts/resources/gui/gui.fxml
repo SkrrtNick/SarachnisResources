@@ -55,7 +55,7 @@
                         <Text layoutX="266.0" layoutY="203.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Spec" />
                         <CheckBox fx:id="checkAutoRetaliate" layoutX="18.0" layoutY="59.0" mnemonicParsing="false" text="Use auto-retaliate">
                            <tooltip>
-                              <Tooltip text="Recommended" />
+                              <Tooltip text="Will disable/enable depending on your selection" />
                            </tooltip>
                         </CheckBox>
                         <CheckBox fx:id="checkFn" layoutX="18.0" layoutY="88.0" mnemonicParsing="false" text="Always use fn keys">
